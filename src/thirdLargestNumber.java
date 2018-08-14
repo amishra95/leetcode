@@ -24,12 +24,13 @@ class Solution {
         
         HashSet<Integer> set = new HashSet<>();
         int[] arr2 = new int[arr.length];
-        
-    for(int i = 0; i < arr.length; i++){
-        if(!set.contains(arr[i])){
-            arr2.add(arr[i]);
+        int index = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(!set.contains(arr[i])){
+                arr2[index] = arr[i];
+                index++;
+            }
         }
-    }
     
         return arr2;
     }
