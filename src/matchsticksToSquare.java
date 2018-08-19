@@ -1,26 +1,58 @@
 class Solution {
     public boolean makesquare(int[] nums) {
-        int total = 0;
-        for (int n : nums) total += n;
-        if (total == 0 || total % 4 > 0) return false;
-        total /= 4;
-        Arrays.sort(nums);
-        for (int i = 0; i < 4; i++) {
-            if (!search(nums, nums.length - 1, 0, total)) return false;
+        if(nums == null || nums.length == 0){
+            return false;
         }
-        return true;
-    }
-    
-    private boolean search(int[] nums, int start, int sum, int target) {
-        if (start < 0 || sum > target) return false;
-        for (int i = start; i >= 0; i--) {
-            if (nums[i] == 0) continue;
-            int temp = nums[i];
-            nums[i] = 0;
-            if (sum + temp == target || search(nums, i - 1, sum + temp, target)) return true;
-            nums[i] = temp;
+        if(squareCheck(nums) == true){
+            return true;
         }
-        return false;
-    }
+    return false;
 }
+    
+   public int countOccurences(int[] nums, int n, int x)
+   {
+       int count = 0;
+       for(int i = 0; i < n; i++){
+           if(x == nums[i])
+               count++;
+           return count;
+    }
+       
+       
+    public boolean squareCheck(int[] nums){
+    countOccurences(nums, n, x);
+    int sum = 0;
+        
+        if(count == 4 ||  count == 9 || count == 16){
+        return true;        
+    }
+    else {
+        if(count == 3 || count == 8 || count == 15){
+            if(nums[i]-nums[x] == nums(contains){
+                return true;
+            }
+        }
+               
+        
+        else if( count == 2 || count == 7 || count == 14){
+            if(nums[i] - nums[x]- nums[x-1] == nums(contains))
+                return truel
+        }
+        
+        else {
+            return false;
+            
+        }
+          
+    }
+        
+        
+    }
+        
+        
+        
+    }
 
+   
+   
+    }
