@@ -1,4 +1,4 @@
-class Solution {
+class Leetcode {
     public TreeNode invertTree(TreeNode root) {
         if(null==root)
             return root;
