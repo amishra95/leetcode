@@ -1,28 +1,43 @@
 class FreqStack {
-    Map<Integer, Integer> freq;
-    Map<Integer, Stack<Integer>> group;
-    int maxfreq;
-
+    int pushCount;
+    PriorityQueue<Node> pq;
+    Map<Integer, Integer> map;
     public FreqStack() {
-        freq = new HashMap();
-        group = new HashMap();
-        maxfreq = 0;
+        pushCount = 0;
+        pq = new PriorityQueue<Node>(new NodeComparator());
+        map = new HashMap<Integer, Integer>();
     }
-
+    
     public void push(int x) {
-        int f = freq.getOrDefault(x, 0) + 1;
-        freq.put(x, f);
-        if (f > maxfreq)
-            maxfreq = f;
-
-        group.computeIfAbsent(f, z-> new Stack()).push(x);
+        if (!map.containsKey(x)){
+            map.put(x, 0);
+        }
+        map.put(x, map.get(x) + 1);
+        Node n = new Node(x, map.get(x), pushCount++);
+        pq.offer(n);
     }
-
+    
     public int pop() {
-        int x = group.get(maxfreq).pop();
-        freq.put(x, freq.get(x) - 1);
-        if (group.get(maxfreq).size() == 0)
-            maxfreq--;
-        return x;
+        return pq.poll().value;
+    }
+    
+    
+    class Node{
+        public int value;
+        int freq;
+        int pushIndex;
+        public Node(int v, int f, int p){
+            this.value = v;
+            this.freq = f;
+            this.pushIndex = p;
+        }
+    }
+    
+    class NodeComparator implements Comparator<Node>{
+        public int compare(Node a, Node b){
+            if (a.freq != b.freq) return b.freq -a.freq;
+                    return b.pushIndex - a.pushIndex;
+
+        }
     }
 }
