@@ -14,3 +14,28 @@ class Solution {
         return ans.toArray(new String[ans.size()]);
     }
 }
+
+
+
+// Incorrect Solution will involve:
+
+public String[] uncommonFromSentences(String A, String B) {
+        if(A == null || B == null || A.isEmpty() || B.isEmpty()){
+            return null;
+        }
+        StringBuilder ans = new StringBuilder();
+        String concatStr = A.concat(" ").concat(B);
+        String[] splitArray = concatStr.split(" ");
+        Arrays.sort(splitArray);
+        for(int i = 0; i < splitArray.length; i++){
+            if(i+1 < splitArray.length){
+                if(!splitArray[i].equalsIgnoreCase(splitArray[i+1])){
+                    ans.append(splitArray[i]).append(" ").append(splitArray[i+1]);
+                }
+            }else{
+                ans.append(splitArray[i]);
+            }
+        }
+        return ans.toString().split(" ");
+    }
+}
