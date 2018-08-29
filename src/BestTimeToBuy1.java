@@ -1,4 +1,3 @@
-
 public class BestTimeToBuy1 {
 	public int maxProfit(int[] prices) {
 		int maxCur = 0;
