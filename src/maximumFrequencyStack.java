@@ -34,7 +34,7 @@ class FreqStack {
     }
     
     class NodeComparator implements Comparator<Node>{
-        public int compare(Node a, Node b){
+       public int compare(Node a, Node b){
             if (a.freq != b.freq) return b.freq -a.freq;
                     return b.pushIndex - a.pushIndex;
 
