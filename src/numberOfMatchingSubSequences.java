@@ -5,8 +5,7 @@ class Solution {
         Set<String> invalid=new HashSet<>();
         for(String word:words)
         {
-            
-            if(valid.contains(word)) 
+           if(valid.contains(word)) 
             {
                 ans++;
                 continue;
