@@ -1,6 +1,6 @@
 
 public class asteroidCollision {
-	 public int[] asteroidCollision(int[] asteroids) {
+	public int[] asteroidCollision(int[] asteroids) {
 	        
 		    Stack<Integer> stack = new Stack();
 		        asteroids:
