@@ -3,6 +3,7 @@ public class Solution{
         if (n == 1) {
             return 1;
         }
+       
         int[] dp = new int[n + 1];
         dp[1] = 1;
         dp[2] = 2;
