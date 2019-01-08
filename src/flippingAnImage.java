@@ -1,4 +1,5 @@
 public class Solution{
+        
 public int[][] flipAndInvertImage(int[][] A) {
         for(int i=0; i < A.length; i++)
             flipAndInvertRow(A[i]);
