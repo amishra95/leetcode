@@ -5,4 +5,5 @@ class Solution {
       }
         return Math.max(a.length(), b.length());
     }
+
 }
