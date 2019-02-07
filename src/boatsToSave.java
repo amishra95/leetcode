@@ -1,7 +1,6 @@
 
 public class boatsToSave {
-
-	 public int numRescueBoats(int[] people, int limit) {
+	public int numRescueBoats(int[] people, int limit) {
 	        Arrays.sort(people);
 	        int i = 0, j = people.length - 1;
 	        int ans = 0;
