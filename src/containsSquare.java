@@ -1,9 +1,7 @@
 import java.util.Set;
 
 public class containsSquare {
-	
 	public boolean judgeSquare(int c) {
-		
 		if(c < 0) {
 			return false;
 			
