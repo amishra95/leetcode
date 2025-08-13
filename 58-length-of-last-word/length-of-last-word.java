@@ -2,7 +2,7 @@ class Solution {
     public int lengthOfLastWord(String s) {
 
     int count = 0;
-    s = s.trim();
+    
     if(s == null || s.length() == 0){
             return 0;
     }    
