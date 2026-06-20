@@ -8,6 +8,8 @@
 <strong>Output:</strong> true
 </pre><p><strong class="example">Example 2:</strong></p>
 <pre><strong>Input:</strong> n = 5
+
+	
 <strong>Output:</strong> false
 </pre><p><strong class="example">Example 3:</strong></p>
 <pre><strong>Input:</strong> n = 1
