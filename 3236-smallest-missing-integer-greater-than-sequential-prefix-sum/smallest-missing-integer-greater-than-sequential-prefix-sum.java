@@ -20,8 +20,9 @@ class Solution {
     }
     
     while(set.contains(sum)){
-        sum++;
+        sum += 1;
     }
+    
     return sum;
 
 }
