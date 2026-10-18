@@ -7,6 +7,8 @@ class Solution {
         int zeroCount = 0;
 
         for(int right = 0; right < n; right++){
+
+            
             if(nums[right] != 1){
                 zeroCount++;
             }
