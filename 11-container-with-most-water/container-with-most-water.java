@@ -9,6 +9,7 @@ class Solution {
             area = Math.max(area, (right-left)* Math.min(height[left], height[right]));
             if(height[left] < height[right]){
                 left++;
+                
             }
             else
                 right--;
